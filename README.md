@@ -1,7 +1,10 @@
 **Tesla Powerwall 2.0 and OpenC2 Enablement**
+
 A Proof of Concept
 In this writeup an OpenC2 connector for the Tesla Powerwall is introduced to illustrate the use of the OpenC2 language in an IOT device. Due to the lack of formal Tesla REST API documentation online, this proof of concept is incomplete. All commands in the development of this OpenC2 proof of concept were intentionally restricted to query commands to avoid any unforeseen issues with the Powerwall during the development of this OpenC2 connector. Although there are other commands which allow for making changes, those commands will not be covered in this writeup. Any readers attempting to use this information for their own purposes do so at their own risk.
+
 **Basic OpenC2 Background**
+
 OpenC2 is a language specification currently being worked on out of the oasis-open.org* standards body. The goal of the language is to provide a standard language for initiating commands for command and control of an almost limitless variety of networked devices. In theory, OpenC2 can be used to control firewalls, endpoint malware protection software, IOT devices, databases, routers, switches and anything digital with network connectivity. 
 
 Based on the draft version at the time of this posting an OpenC2 commands structure looks like the following:
@@ -21,10 +24,14 @@ Based on the draft version at the time of this posting an OpenC2 commands struct
 }
 
 In this example a Tesla Powerewall is “OpenC2 enabled” to make interfacing with the Tesla Powerwall much easier to standardize across devices. OpenC2 is in its early draft stage, as such few vendors are adopting it directly into their products, so a transitional approach is demonstrated here. Initially, OpenC2 implementers can create a meta layer to translate OpenC2 commands to their target product's existing API. There are plenty of products in the market that offer REST API access to their applications, these products are a good entry point for OpenC2 enablement. Why add another API layer to an application that already provides a REST API? When an integrator is looking to integrate products across many different vendor applications a REST API is useful, except that every product has a different structure to their REST commands. OpenC2 aims to address this problem by introducing one common language. The use of OpenC2 provides a means to integrate more easily and reduce command mapping time between products. Integrators can spend their integration effort in figuring out what commands to run, versus spending time figuring out what is the shape of the command for a particular vendors REST API.
+
 **Tesla Powerwall**
+
 Tesla powerwall 2.0 is a usable 13.5Kwh battery (per Tesla’s site)** for use in the home as either a backup battery, solar battery or for Time of Use(not tested) usage to run during the day when rates are highest and charge at night when rates are cheaper (your mileage may vary). Due to OpenC2s infancy, some liberties were taken in the interpretation of the command specification. 
 The Tesla Powerwall offers unauthenticated access to numerous REST API calls. The following list is not a complete accounting. Only unauthenticated information gathering commands are present here. The OpenC2 listener only exposes a subset of the values below. 
+
 **REST API Command**
+
 Method  GET
 URI /api/status
 JSON Response:
@@ -36,6 +43,7 @@ JSON Response:
 "git_hash": "db123456c6cad12a3e4c5678e90fff123eb4da5d\n"
 }
 **REST API Command:**
+
 Method  GET
 URI /api/system_status/soe
 JSON Response:
@@ -43,6 +51,7 @@ JSON Response:
 "percentage": 100
 }
 **REST API Command:**
+
 Method  GET
 URI /api/meters/aggregates
 JSON Response:
@@ -148,6 +157,7 @@ JSON Response:
 }
 
 **REST API Command:**
+
 Method  GET
 URI /api/powerwalls
 JSON Response:
@@ -169,7 +179,9 @@ JSON Response:
 "uptime": "1007883s,",
 "connected_to_tesla": true
 }
+
 **REST API Command:**
+
 Method  GET
 URI /api/site_info
 JSON Response:
@@ -190,6 +202,7 @@ JSON Response:
 
 
 **Tesla Powerwall Local LAN accessible Web Interface.**
+
 Want to find the native Tesla Powerwall commands yourself? While looking at the Tesla Powerwall web page, enable developer tools in your browser. Look at the sources tab and format the content for easy viewing by clicking {} to pretty the code. Begin looking for api commands by performing a text search for ‘api’.
 Tesla Powerwall values exposed via OpenC2:
 •   Battery percentage
@@ -207,6 +220,7 @@ Tesla Powerwall values exposed via OpenC2:
 
 
 **OpenC2 Connector Use and Configuration**
+
 The proof of concept in this writeup is coded in NodeJS. It requires a minimal installation of the express module by running ‘npm install express’ in the Tesla_OpenC2 folder. Configuration of the tool requires opening the .etc/config.json file to specify your self-created api key and the IP address of the Powerwall. The api key is set in the code as a form of authorization validation when receiving OpenC2 commands. When the openc2 connector is executed it will require all incoming openc2 commands to pass the api key to perform the requested action. The Powerwall IP address is specified in the openc2server key in the config.json For example a properly formatted config.json looks like this:
 {
 "oc2-api-key":"0123456789123456795fd45d536f886ba4",
