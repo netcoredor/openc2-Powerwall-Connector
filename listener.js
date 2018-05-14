@@ -41,7 +41,7 @@ app.post('/openc2/command/', function (req, res) {
     if (req.headers["apikey"] == AuthConfig["apikey"]) {
         if (req.body.action.toLowerCase() == 'query' && req.body.target.hasOwnProperty('property')) {
             if (req.body.actuator.hasOwnProperty('endpoint_smart_meter')) {
-                if (req.body.target.property.name.toLowerCase() == "battery_percentage") {
+                if (req.body.target.property.toLowerCase() == "battery_percentage") {
                     batteryPercentage(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -50,7 +50,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'device_count') {
+                } else if (req.body.target.property.toLowerCase() == 'device_count') {
                     powerwallsInfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -59,7 +59,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                }else if (req.body.target.property.name.toLowerCase() == 'timezone') {
+                }else if (req.body.target.property.toLowerCase() == 'timezone') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -68,7 +68,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'nominal_system_energy_kwh') {
+                } else if (req.body.target.property.toLowerCase() == 'nominal_system_energy_kwh') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -77,7 +77,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'grid_code') {
+                } else if (req.body.target.property.toLowerCase() == 'grid_code') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -87,7 +87,7 @@ app.post('/openc2/command/', function (req, res) {
 
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'grid_voltage_setting') {
+                } else if (req.body.target.property.toLowerCase() == 'grid_voltage_setting') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -96,7 +96,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'grid_freq_setting') {
+                } else if (req.body.target.property.toLowerCase() == 'grid_freq_setting') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -105,7 +105,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'country') {
+                } else if (req.body.target.property.toLowerCase() == 'country') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -114,7 +114,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'last_communication_time') {
+                } else if (req.body.target.property.toLowerCase() == 'last_communication_time') {
                     aggregates(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -124,7 +124,7 @@ app.post('/openc2/command/', function (req, res) {
                         }
                     });
 
-                } else if (req.body.target.property.name.toLowerCase() == 'instant_apparent_power') {
+                } else if (req.body.target.property.toLowerCase() == 'instant_apparent_power') {
                     aggregates(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -133,7 +133,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'site_name') {
+                } else if (req.body.target.property.toLowerCase() == 'site_name') {
                     siteinfo(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
@@ -142,7 +142,7 @@ app.post('/openc2/command/', function (req, res) {
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
-                } else if (req.body.target.property.name.toLowerCase() == 'uptime') {
+                } else if (req.body.target.property.toLowerCase() == 'uptime') {
                     uptime(function (parsedbody) {
                         if (!parsedbody) {
                             res.sendStatus(400);
