@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "708f5f45-6682-4283-859f-0703079ecb86",
+		"name": "Tesla Powerwall 2.0 OpenC2 without Header and No Command header",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OpenC2: Powerwall 2.0 Battery Percentage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"battery_percentage\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 openc2 command query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"94656470258152899332191351879011\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"openc2\": {}\r\n  },\r\n  \"actuator\": {\r\n      \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 TimeZone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"timezone\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 grid_voltage_setting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_voltage_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 grid_frequency_setting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_freq_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"country\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 site_name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"site_name\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 nominal_system_energy_kwh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"nominal_system_energy_kwh\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 instant_apparent_power",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"instant_apparent_power\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 last_communication_time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"last_communication_time\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 Grid Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenC2: Powerwall 2.0 Powerwall Count",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apikey",
+						"value": "{{apikey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:1512/openc2/command",
+					"host": [
+						"localhost"
+					],
+					"port": "1512",
+					"path": [
+						"openc2",
+						"command"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d9fe65b6-c954-4ee0-a512-1deaaa7b0aa0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "21e29c96-7596-45f0-b610-047f64d55551",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
