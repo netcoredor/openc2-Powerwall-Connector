@@ -1,5 +1,4 @@
 **Tesla Powerwall 2.0 and OpenC2 Enablement**
-
 A Proof of Concept
 In this writeup an OpenC2 connector for the Tesla Powerwall is introduced to illustrate the use of the OpenC2 language in an IOT device. Due to the lack of formal Tesla REST API documentation online, this proof of concept is incomplete. All commands in the development of this OpenC2 proof of concept were intentionally restricted to query commands to avoid any unforeseen issues with the Powerwall during the development of this OpenC2 connector. Although there are other commands which allow for making changes, those commands will not be covered in this writeup. Any readers attempting to use this information for their own purposes do so at their own risk.
 
@@ -33,8 +32,11 @@ The Tesla Powerwall offers unauthenticated access to numerous REST API calls. Th
 **REST API Command**
 
 Method  GET
+
 URI /api/status
+
 JSON Response:
+
 {
 "start_time": "2018-03-16 22:31:50 +0800",
 "up_time_seconds": "279h52m23.949702965s",
@@ -42,19 +44,28 @@ JSON Response:
 "version": "1.15.0\n",
 "git_hash": "db123456c6cad12a3e4c5678e90fff123eb4da5d\n"
 }
+
 **REST API Command:**
 
 Method  GET
+
 URI /api/system_status/soe
+
 JSON Response:
+
 {
 "percentage": 100
 }
+
+
 **REST API Command:**
 
 Method  GET
+
 URI /api/meters/aggregates
+
 JSON Response:
+
 {
 "site": {
 "last_communication_time": "2018-03-28T14:26:39.190433322-04:00",
@@ -159,8 +170,11 @@ JSON Response:
 **REST API Command:**
 
 Method  GET
+
 URI /api/powerwalls
+
 JSON Response:
+
 {
 "powerwalls": [
 {
@@ -170,10 +184,15 @@ JSON Response:
 ],
 "has_sync": true
 }
+
 **REST API Command:**
+
 Method  GET
+
 URI /api/sitemaster
+
 JSON Response:
+
 {
 "running": true,
 "uptime": "1007883s,",
@@ -183,8 +202,11 @@ JSON Response:
 **REST API Command:**
 
 Method  GET
+
 URI /api/site_info
+
 JSON Response:
+
 {
 "site_name": "Home Energy Gateway",
 "timezone": "America/New_York",
@@ -205,6 +227,7 @@ JSON Response:
 
 Want to find the native Tesla Powerwall commands yourself? While looking at the Tesla Powerwall web page, enable developer tools in your browser. Look at the sources tab and format the content for easy viewing by clicking {} to pretty the code. Begin looking for api commands by performing a text search for ‘api’.
 Tesla Powerwall values exposed via OpenC2:
+
 •   Battery percentage
 •   Timezone
 •   Nominal system energy in kwh
@@ -226,10 +249,14 @@ The proof of concept in this writeup is coded in NodeJS. It requires a minimal i
 "oc2-api-key":"0123456789123456795fd45d536f886ba4",
 "openc2server":"10.0.0.10"
 }
+
 After specifying the api and server ip in the config.json file, execute node listener.js to start the OpenC2 listener on port 1512. To customize the port, simply open the listener.js file and scroll to the bottom to modify the listening port number. Once the listener is running OpenC2 commands can received for processing. 
 There are many ways to send OpenC2 commands. In this example we’ll focus on sending commands with python to enable use of the commands on as many operating systems as possible with minimal installation requirements.
+
 Python Example
+
     In order to run with python, please ensure you have the request library installed by running pip install request. Create a file named ‘tesla1.py’ and insert the following code:
+
 import requests 
 url = "http://localhost:1512/oc2/" 
 payload = '{\
@@ -253,5 +280,6 @@ Once the proper values for key and powerwall openc2server are specified in the c
 
 
 Reference
+
 *OASIS Open Command and Control (OpenC2) TC | OASIS. (2018, 03 28). Retrieved from OASIS Open Command and Control (OpenC2) TC | OASIS: https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2
 **Tesla. (2018, 03 28). Retrieved from Tesla Powerwall: https://www.tesla.com/powerwall
