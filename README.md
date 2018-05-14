@@ -1,3 +1,6 @@
+**NOTE: This is a Tesla fan developed proof of concept. Developed based on publicly available information.
+
+
 **Tesla Powerwall 2.0 and OpenC2 Enablement**
 A Proof of Concept
 In this writeup an OpenC2 connector for the Tesla Powerwall is introduced to illustrate the use of the OpenC2 language in an IOT device. Due to the lack of formal Tesla REST API documentation online, this proof of concept is incomplete. All commands in the development of this OpenC2 proof of concept were intentionally restricted to query commands to avoid any unforeseen issues with the Powerwall during the development of this OpenC2 connector. Although there are other commands which allow for making changes, those commands will not be covered in this writeup. Any readers attempting to use this information for their own purposes do so at their own risk.
