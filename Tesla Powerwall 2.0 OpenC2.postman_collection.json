@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"battery_percentage\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0607a498-0bd3-409c-9033-06eee09f7db4\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\":  { \r\n    \t\"name\" : \"site_name\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"94656470258152899332191351879011\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"openc2\": {}\r\n  },\r\n  \"actuator\": {\r\n      \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0b6076cc-068f-40cd-80ff-0293516b6ba7\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"openc2\": {}\r\n  },\r\n  \"actuator\": {\r\n      \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -85,7 +85,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"timezone\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0d0fcab2-07c0-40a5-b0ca-06c73be2489d\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"timezone\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -117,7 +117,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_voltage_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0813808c-04c0-40d5-8092-0110bc5e3a1e\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_voltage_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -149,7 +149,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_freq_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0d7f5f68-0d60-404c-90e1-004f751b0681\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_freq_setting\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -181,7 +181,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"country\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"094092e7-06ef-40da-90a1-04cdd16063b3\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"country\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -213,7 +213,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"site_name\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"09906fb1-0651-4062-b00f-00a09e9e0139\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"site_name\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -245,7 +245,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"nominal_system_energy_kwh\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0b3a898a-0f71-4037-9059-0abe29b422a9\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"nominal_system_energy_kwh\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -277,7 +277,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"instant_apparent_power\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0af6d42d-06d8-402a-9073-0b05f0fc1a1e\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"instant_apparent_power\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -309,7 +309,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"last_communication_time\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0101f7f4-0b03-40ee-b03b-023ab0ee4fea\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"last_communication_time\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -341,7 +341,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"0b6be081-0076-4076-903f-0bd02224bb44\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
@@ -373,7 +373,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"72221242711906412840273569986755\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
+					"raw": "{\r\n  \"id\": \"033ae02e-0220-408f-b033-0762f8ca0186\",\r\n  \"action\": \"query\",\r\n  \"target\": {\r\n    \"property\": {\r\n      \"name\": \"grid_code\"\r\n    }\r\n  },\r\n  \"actuator\": {\r\n    \"endpoint_smart_meter\": {\r\n      \"actuator_id\": \"com.tesla.powerwall\",\r\n      \"asset_id\": \"\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
 					"raw": "localhost:1512/openc2/command",
