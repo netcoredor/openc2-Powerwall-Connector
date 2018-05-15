@@ -171,5 +171,5 @@ app.post('/openc2/command/', function (req, res) {
 });
 
 http.createServer(app).listen(1512, function () {
-    console.log('Symantec OpenC2 Middleware Listening on http://0.0.0.0:1512');
+    console.log('OpenC2 Middleware Listening on http://0.0.0.0:1512');
 });
