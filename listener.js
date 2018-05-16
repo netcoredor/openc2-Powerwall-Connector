@@ -46,7 +46,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "battery_percentage" : ' + parsedbody.percentage + '}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "battery_percentage" : ' + parsedbody.percentage + '}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -55,7 +55,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + JSON.stringify(parsedbody.powerwalls) + '}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + JSON.stringify(parsedbody.powerwalls) + '}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -64,7 +64,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "time_zone" : "' + parsedbody.timezone + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "time_zone" : "' + parsedbody.timezone + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -73,7 +73,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{"command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "nominal_system_energy_kwh" : ' + parsedbody.nominal_system_energy_kWh + '}}';
+                            var output = '{"id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "nominal_system_energy_kwh" : ' + parsedbody.nominal_system_energy_kWh + '}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -82,7 +82,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{"command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_code" : "' + parsedbody.grid_code + '"}}';
+                            var output = '{"id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_code" : "' + parsedbody.grid_code + '"}}';
                             res.send(JSON.parse(output, null, 4));
 
                         }
@@ -92,7 +92,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_voltage_setting" : "' + parsedbody.grid_voltage_setting + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_voltage_setting" : "' + parsedbody.grid_voltage_setting + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -101,7 +101,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_frequency_setting" : "' + parsedbody.grid_freq_setting + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "grid_frequency_setting" : "' + parsedbody.grid_freq_setting + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -110,7 +110,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "country" : "' + parsedbody.country + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "country" : "' + parsedbody.country + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -119,7 +119,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "last_communication_time" : "' + parsedbody.site.last_communication_time + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200", "results" : ' + '{ "last_communication_time" : "' + parsedbody.site.last_communication_time + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -129,7 +129,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "results" : ' + '{ "instant_apparent_power" : ' + parsedbody.site.instant_apparent_power + '}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "results" : ' + '{ "instant_apparent_power" : ' + parsedbody.site.instant_apparent_power + '}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -138,7 +138,7 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200","results" : ' + '{ "site_name" : "' + parsedbody.site_name + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200","results" : ' + '{ "site_name" : "' + parsedbody.site_name + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
@@ -147,24 +147,24 @@ app.post('/openc2/command/', function (req, res) {
                         if (!parsedbody) {
                             res.sendStatus(400);
                         } else {
-                            var output = '{ "command_ref" : "' + req.body.id + '", "status": "200","results" : ' + '{ "uptime" : "' + parsedbody.uptime + '"}}';
+                            var output = '{ "id_ref" : "' + req.body.id + '", "status": "200","results" : ' + '{ "uptime" : "' + parsedbody.uptime + '"}}';
                             res.send(JSON.parse(output, null, 4));
                         }
                     });
                 } else {
-                    res.send('{ "command_ref" : "", "status": "400", "results" : "failed" }');
+                    res.send('{ "id_ref" : "", "status": "400", "results" : "failed" }');
                 }
             }
 
         }
 
         if (req.body.action.toLowerCase() == 'query' && req.body.target.hasOwnProperty('openc2')) {
-            var output = '{"command_ref" : "' + req.body.id + '","status": "200","results" : {"action" : "query","target" : {"property" : ["battery_percentage","timezone","nominal_system_energy_kwh","grid_code","grid_voltage_setting","grid_freq_setting","country","last_communication_time","instant_apparent_power","site_name"]}}}'
+            var output = '{"id_ref" : "' + req.body.id + '","status": "200","results" : {"action" : "query","target" : {"property" : ["battery_percentage","timezone","nominal_system_energy_kwh","grid_code","grid_voltage_setting","grid_freq_setting","country","last_communication_time","instant_apparent_power","site_name"]}}}'
             res.send(JSON.parse(output), null, 4);
                }
     }
     else {
-         res.send('{ "command_ref" : "", "status": "401", "results" : "failed" }');
+         res.send('{ "id_ref" : "", "status": "401", "results" : "failed" }');
 
 
     }
